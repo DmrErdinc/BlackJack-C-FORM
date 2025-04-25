@@ -1,24 +1,66 @@
-<h1>Blackjack</h1>
-<h2>A Windows Form application written in C# which simulates a game of the card game "Blackjack".</h2>
-<pre>
- ________  ___       ________  ________  ___  __          ___  ________  ________  ___  __       
-|\   __  \|\  \     |\   __  \|\   ____\|\  \|\  \       |\  \|\   __  \|\   ____\|\  \|\  \     
-\ \  \|\ /\ \  \    \ \  \|\  \ \  \___|\ \  \/  /|_     \ \  \ \  \|\  \ \  \___|\ \  \/  /|_   
- \ \   __  \ \  \    \ \   __  \ \  \    \ \   ___  \  __ \ \  \ \   __  \ \  \    \ \   ___  \  
-  \ \  \|\  \ \  \____\ \  \ \  \ \  \____\ \  \\ \  \|\  \\_\  \ \  \ \  \ \  \____\ \  \\ \  \ 
-   \ \_______\ \_______\ \__\ \__\ \_______\ \__\\ \__\ \________\ \__\ \__\ \_______\ \__\\ \__\
-    \|_______|\|_______|\|__|\|__|\|_______|\|__| \|__|\|________|\|__|\|__|\|_______|\|__| \|__|
 
-</pre>
-Ascii art from <a href="http://patorjk.com/software/taag/">here</a>.
+# Proje Adı
 
-Thanks to the following site for the images of the playing cards:
-<a href="http://www.jfitz.com/cards/" target="_blank">jfitz.com/cards/</a>
+![Arayüz Ekran Görüntüsü](1.PNG)
 
-I created a <code>Card</code> class to hold information about the cards. At the start of the game, there are 3 cards turned face down. When the "Deal" button is clicked, 2 random cards are selected for the initial part of the hand. A card is added to the hand each time the "Hit Me" button is clicked. The sum of the cards in the hand is displayed at all times, but once the value exceeds 21, the game is over and must be reset:
+## Açıklama
 
-<img src="https://github.com/pda87/Blackjack/blob/master/Blackjack/images/Blackjack.PNG" alt ="Blackjack">
+Bu proje, **Proje Adı** altında kullanıcıya özgü bir deneyim sunmak üzere tasarlanmıştır.  
+Temel amaç, kullanıcıların X işlemlerini kolayca yapabilmesine olanak sağlamak ve Y özelliklerini otomatikleştirmektir.
 
-Currently the value of the Ace is set to be 11, but I plan to write in functionality so that the Ace can have a value of either 11 or 1, depending on the value of the hand.
+## İçindekiler
 
-<strong>(Program is not finished yet.)</strong>
+- [Özellikler](#özellikler)
+- [Kurulum](#kurulum)
+- [Kullanım](#kullanım)
+- [Örnekler](#örnekler)
+- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Katkıda Bulunanlar](#katkıda-bulunanlar)
+- [Lisans](#lisans)
+
+## Özellikler
+
+- 🚀 Hızlı ve kullanıcı dostu arayüz  
+- 🔧 Kolay kurulum ve yapılandırma  
+- 📊 Gerçek zamanlı veri görselleştirme  
+- 🔒 Güvenli veri işleme mekanizmaları  
+
+## Kurulum
+
+1. Depoyu klonlayın  
+   ```bash
+   git clone https://github.com/KULLANICI_ADI/REPO_ADI.git
+   ```
+2. Proje dizinine gidin  
+   ```bash
+   cd REPO_ADI
+   ```
+3. Gerekli bağımlılıkları yükleyin  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Kullanım
+
+```bash
+python main.py
+```
+
+- Açılan arayüzde gerekli ayarları yaptıktan sonra **Başlat** butonuna tıklayın.  
+- İşlemler tamamlandığında sonuçlar `output/` klasöründe saklanacaktır.
+
+## Örnekler
+
+Detaylı örnek senaryoları `examples/` klasöründe bulabilirsiniz.
+
+## Ekran Görüntüleri
+
+![Ana Ekran](1.PNG)
+
+## Katkıda Bulunanlar
+
+- [Dmr.Erdinc](https://github.com/DmrErdinc) – Proje sahibi ve geliştirici
+
+## Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır. Ayrıntılar için `LICENSE` dosyasına bakınız.

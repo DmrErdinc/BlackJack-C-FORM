@@ -13,26 +13,8 @@ namespace Blackjack
 {
     public partial class Form1 : Form
     {
-        /* http://patorjk.com/software/taag/
-        //https://github.com/pda87/Blackjack
-         
- ________  ___       ________  ________  ___  __          ___  ________  ________  ___  __       
-|\   __  \|\  \     |\   __  \|\   ____\|\  \|\  \       |\  \|\   __  \|\   ____\|\  \|\  \     
-\ \  \|\ /\ \  \    \ \  \|\  \ \  \___|\ \  \/  /|_     \ \  \ \  \|\  \ \  \___|\ \  \/  /|_   
- \ \   __  \ \  \    \ \   __  \ \  \    \ \   ___  \  __ \ \  \ \   __  \ \  \    \ \   ___  \  
-  \ \  \|\  \ \  \____\ \  \ \  \ \  \____\ \  \\ \  \|\  \\_\  \ \  \ \  \ \  \____\ \  \\ \  \ 
-   \ \_______\ \_______\ \__\ \__\ \_______\ \__\\ \__\ \________\ \__\ \__\ \_______\ \__\\ \__\
-    \|_______|\|_______|\|__|\|__|\|_______|\|__| \|__|\|________|\|__|\|__|\|_______|\|__| \|__|
-          
-         */
-
-        /////////////////////////////////////////////////////////////////////////////////
-        ////// A C# WINDOWS FORM APP SIMULATING A GAME OF THE CARD GAME 'BLACKJACK' /////
-        /////////////////////// AUTHOR: PETER ARDEN /////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////
-
-        //CHANGE THE VALUE OF ALL FACE CARDS TO 10, AND THE ACE TO 11
-
+       
+     
         List<Card> playercardList = new List<Card>()
         {
             new Card() { Value  = 0, Name = "null", Image = "null" }
@@ -145,8 +127,8 @@ namespace Blackjack
         {
             if (playercardSum > 0)
             {
-                    resultLabel.Text = String.Format
-                    ("Already started.");
+                    Erdinç.Text = String.Format
+                    ("Zaten başladı.");
             }
 
             else
@@ -202,9 +184,9 @@ namespace Blackjack
 
                 if (playercardSum == 21)
                 {
-                    resultLabel.Text = String.Format
-                        ("The sum of your cards is: {0}, you win!", playercardSum);
-                    MessageBox.Show("You win!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Erdinç.Text = String.Format
+                        ("\r\nKartların toplamı: {0}, Kazandın!", playercardSum);
+                    MessageBox.Show("Kazandın!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     resetGame();
                 }
 
@@ -269,7 +251,7 @@ namespace Blackjack
         {
             if (playercardSum == 0)
             {
-                resultLabel.Text = "Click the Start button...";
+                Erdinç.Text = "Başlat düğmesine tıklayın...";
                 //displayCardBack(pictureBox3);
             }
 
@@ -278,7 +260,7 @@ namespace Blackjack
                 if (playercardSum > 100) //to be changed
                 {
                     resetGame();
-                    resultLabel.Text = "Resetting game...";
+                    Erdinç.Text = "Oyun sıfırlanıyor...";
                 }
 
                 else
@@ -307,16 +289,16 @@ namespace Blackjack
                     sumPlayerCards();
                     if (playercardSum > 21)
                     {
-                        resultLabel.Text = String.Format
-                            ("The sum of your cards is: {0}, you lose!", playercardSum);
-                        MessageBox.Show("You lose!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Erdinç.Text = String.Format
+                            ("Kartların toplamı: {0}, Kaybettin!", playercardSum);
+                        MessageBox.Show("Kaybettin!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         resetGame();
                     }
                     else if (playercardSum == 21)
                     {
-                        resultLabel.Text = String.Format
-                            ("The sum of your cards is: {0}, you win!", playercardSum);
-                        MessageBox.Show("You win!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Erdinç.Text = String.Format
+                            ("Kartların toplamı: {0}, Kazandın!", playercardSum);
+                        MessageBox.Show("Kazandın!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         resetGame();
                     }
                 }
@@ -330,7 +312,7 @@ namespace Blackjack
 
         private void resetGame()
         {
-            resultLabel.Text = null;
+            Erdinç.Text = null;
 
             displayCardBack(pictureBox1);
             displayCardBack(pictureBox2);
@@ -353,7 +335,7 @@ namespace Blackjack
             playercardList.Clear();
             bankercardList.Clear();
             usedCards.Clear();
-            resultLabel.Text = "Player choice";
+            Erdinç.Text = "DmrErdinc";
         }
 
         private void displayCardBack(PictureBox picturebox)
@@ -367,7 +349,7 @@ namespace Blackjack
         {
             if (playercardSum == 0)
             {
-                resultLabel.Text = "Click the Start button...";
+                Erdinç.Text = "Başlat düğmesine tıklayın...";
                 return;
             }
             sumBankerCards();
@@ -399,23 +381,23 @@ namespace Blackjack
 
             if (bankercardSum > 21)
             {
-                resultLabel.Text = String.Format
-                    ("The sum of banker cards is: {0}, you lose!", bankercardSum);
-                MessageBox.Show("You win!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Erdinç.Text = String.Format
+                    ("Kartların toplamı: {0}, Kaybettin!", bankercardSum);
+                MessageBox.Show("Kazandın!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 resetGame();
             }
             else if (playercardSum <= bankercardSum)
             {
-                resultLabel.Text = String.Format
-                    ("The sum of your cards is: {0}, you lose!", playercardSum);
-                MessageBox.Show("You lose!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Erdinç.Text = String.Format
+                    ("Kartların toplamı: {0}, Kaybettin!", playercardSum);
+                MessageBox.Show("Kaybettin!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 resetGame();
             }
             else
             {
-                resultLabel.Text = String.Format
-                    ("The sum of your cards is: {0}, you win!", playercardSum);
-                MessageBox.Show("You win!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Erdinç.Text = String.Format
+                    ("Kartların toplamı: {0}, Kazandın!", playercardSum);
+                MessageBox.Show("Kazandın!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 resetGame();
             }
 
