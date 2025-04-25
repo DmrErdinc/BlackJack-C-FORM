@@ -1,12 +1,11 @@
 
 # Proje Adı
+BlackJack C#FORM
 
-![Arayüz Ekran Görüntüsü](1.PNG)
 
 ## Açıklama
 
-Bu proje, **Proje Adı** altında kullanıcıya özgü bir deneyim sunmak üzere tasarlanmıştır.  
-Temel amaç, kullanıcıların X işlemlerini kolayca yapabilmesine olanak sağlamak ve Y özelliklerini otomatikleştirmektir.
+Blackjack windows Form olarak oynamak
 
 ## İçindekiler
 
