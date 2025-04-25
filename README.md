@@ -28,11 +28,12 @@ Blackjack windows Form olarak oynamak
 
 1. Depoyu klonlayın  
    ```bash
-   git clone https://github.com/KULLANICI_ADI/REPO_ADI.git
+   git clone https://github.com/DmrErdinc/BlackJack-C-FORM.git
    ```
 2. Proje dizinine gidin  
    ```bash
-   cd REPO_ADI
+   cd BlackJack-C-FORM
+   
    ```
 3. Gerekli bağımlılıkları yükleyin  
    ```bash
